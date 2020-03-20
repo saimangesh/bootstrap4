@@ -8,6 +8,10 @@
     border-bottom: 2px ridge;
     min-height:400px;
 }
+.row-space{
+    margin:0px auto;
+    padding:70px 0px 70px 0px;
+}
 .footer {
     background-color: #D1C4E9;
     margin: 0px auto;
