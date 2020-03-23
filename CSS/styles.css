@@ -42,3 +42,9 @@ body{
     margin:0px auto;
     padding:40px 40px 40px 40px;
 }
+.tab-content {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
