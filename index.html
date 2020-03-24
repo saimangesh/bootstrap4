@@ -28,9 +28,50 @@
                     <li class="nav-item "><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
                     <li class="nav-item "><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
+                <span class="navbar-text">
+                    <a data-toggle="modal" data-target="#loginModal">
+                        <span class="fa fa-sign-in"></span>Login
+                    </a>
+                </span>
             </div>
         </div>
       </nav>
+      <div id="loginModal" class="modal fade" role="dialog">
+          <div class="modal-dialog modal-lg" role="content">
+              <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">Login</h4>
+                    <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                      <form>
+                          <div class="form-row">
+                              <div classs="form-group col-sm-4">
+                                  <label class="sr-only" for="exampleInputEmail">Email</label>
+                                  <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail" placeholder="Enter Email">
+                              </div>
+                              <div classs="form-group col-sm-4">
+                                <label class="sr-only" for="exampleInputPass">Password</label>
+                                <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPass" placeholder="Password">
+                            </div>
+                            <div class="col-sm-auto">
+                                <div class="form-check">
+                                   <input class="form-check-input" type="checkbox">
+                                   <label class="form-check-label">Remember me</label>
+                                </div>
+                            </div>
+                          </div>
+                            <div class="form-row">
+                                <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary btn-sm ml-1" >Sign-in</button>
+                            </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
@@ -44,7 +85,11 @@
                             <img src="img/logo.png" class="img-fluid">
                         </div>
                         <div class="col-12 col-sm align-self-center">
-                            <a role="button" class="btn btn-block btn-sm btn-warning" href="#reservationDiv">Reserve Table</a>
+                            <a role="button" class="btn btn-block btn-sm nav-link btn-warning" 
+                             data-toggle="tooltip" data-html="true" 
+                             title="Or Call us at 8374272700" 
+                            data-placement="bottom"
+                             href="#reservationDiv">Reserve Table</a>
                         </div> 
                     </div>                  
                 </div>
@@ -206,10 +251,17 @@
         </div>
     </footer>
     <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <script src="bootstrap/js/bootstrap-tooltip.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
 </body>
 
 </html>
